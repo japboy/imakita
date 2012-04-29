@@ -1,0 +1,7 @@
+h1= title
+section
+  h1 イベント一覧
+  ul
+    each event in events
+      li
+        a(href='/event')= event.name

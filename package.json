@@ -1,0 +1,13 @@
+{
+    "name": "imakita"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "jade": "0.22.1"
+    , "stylus": ">= 0.0.1"
+    , "mongoose": "2.6.0"
+    , "oauth": "0.9.6"
+    , "socket.io": "0.9.5"
+  }
+}
