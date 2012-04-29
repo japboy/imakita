@@ -15,7 +15,7 @@ exports.twitter = new OAuth(
   'KNdkDdt2VOjaQX8p1Tzg',
   '9XIAzu9nhLMWrpREyfir6TNTJeP75XRHc8eUE3Oa2Pw',
   '1.0',
-  //'http://imakita.herokuapp.com/login',
-  'http://localhost:3000/login',
+  'http://imakita.herokuapp.com/login',
+  //'http://localhost:3000/login',
   'HMAC-SHA1'
 );
