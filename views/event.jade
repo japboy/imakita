@@ -3,14 +3,14 @@ header.header.clearfix
     a(href='/')
       img(src='/images/logo.png', alt='imakita イマキタ', width='115', height='45')
 
-section
+div.login
   if true === data.loggedin && true === data.participated
-    p @#{data.user}
+    p.screen-name @#{data.user}
   else if true === data.loggedin && false === data.participated
-    p @#{data.user} (ゲスト)
+    p.screen-name @#{data.user} (ゲスト)
   else
-    p
-      a(href='/login') ログイン
+    p.screen-name
+      a(href='/login') Twitterでログイン
 
 section.note-body
   .note-body-top
@@ -24,11 +24,11 @@ section.note-body
       if !data.loggedin
         input.form-btn-imakita(type='submit', name='commit', value='今、ここまできた！', id='gps', disabled)
       else if data.participated
-        input(type='submit', value='イマココ!', id='gps')
+        input.form-btn-imakita(type='submit', value='イマココ!', id='gps')
       else
-        input(type='submit', value='イマココ!', id='gps', disabled)
+        input.form-btn-imakita(type='submit', value='イマココ!', id='gps', disabled)
   .ticker-wrapper
-    .ticker
+    .ticker#ticker
       ul
         li
           span.time 17:46
