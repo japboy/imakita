@@ -8,7 +8,9 @@ $(function() {
     console.log('Received ' + data.screen_name + '\'s location.');
     var userElem = document.getElementById(data.user_id);
 
-    $('#notice-wrapper').css({display: 'display'});
+    $('#notice-wrapper').fadeIn('slow', function(){
+      this.css({display: 'display'});
+    });
 
     if (data.attended) {
       userElem.innerText = data.attended;

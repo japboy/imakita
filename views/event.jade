@@ -60,7 +60,7 @@ section.note-body
             span.kita-time
               | #{attendee.attended}
               span.kita-time-small kita
-      else
+      else if null !== attendee.distance
         li.ontheway
           a(href='#')
             img(src='/images/dummy_ico_twi.jpg', alt='ken_c_lo')
@@ -68,12 +68,13 @@ section.note-body
             span.distance
               | あと
               span.num= attendee.distance
-        //li.nodata
-        //  a(href='#')
-        //    img(src='/images/dummy_ico_twi.jpg', alt='ken_c_lo')
-        //    span.screen-name @satococoa
-        //    span.distance
-        //      span.num no data
+      else
+        li.nodata
+          a(href='#')
+            img(src='/images/dummy_ico_twi.jpg', alt='ken_c_lo')
+            span.screen-name @#{attendee.screen_name}
+            span.distance
+              span.num no data
 .btn-new-box
   p.btn-new
     a(href='#') 新規イベントを登録
