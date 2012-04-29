@@ -1,37 +1,94 @@
-h1= data.title
+header.header.clearfix
+  h1.logo
+    a(href='/')
+      img(src='/images/logo.png', alt='imakita イマキタ', width='115', height='45')
+
 section
-  h1= data.name
-  section
-    if true === data.loggedin && true === data.participated
-      p @#{data.user}
-    else if true === data.loggedin && false === data.participated
-      p @#{data.user} (ゲスト)
-    else
-      p
-        a(href='/login') ログイン
-  section
-    h2 会場
-    form()
-      p
-        if !data.loggedin
-          input(type='submit', value='イマココ!', id='gps', disabled)
-        else if data.participated
-          input(type='submit', value='イマココ!', id='gps')
-        else
-          input(type='submit', value='イマココ!', id='gps', disabled)
-  section
-    h2 出欠
+  if true === data.loggedin && true === data.participated
+    p @#{data.user}
+  else if true === data.loggedin && false === data.participated
+    p @#{data.user} (ゲスト)
+  else
     p
-      strong= data.number.current
-      | / #{data.number.max}
-    dl
-      each attendee in data.attendees
-        dt
-          strong @#{attendee.screen_name}
-        if attendee.attended
-          dd(id= attendee.user_id) #{attendee.attended}
-        else
-          dd(id= attendee.user_id) #{attendee.distance}
+      a(href='/login') ログイン
+
+section.note-body
+  .note-body-top
+    p.event-title-text.num Event Title
+    h2.event-title= data.name
+  .members
+    p.members-arrival= data.number.current
+    p.members-all= data.number.max
+  .btn-imakita
+    form
+      if !data.loggedin
+        input.form-btn-imakita(type='submit', name='commit', value='今、ここまできた！', id='gps', disabled)
+      else if data.participated
+        input(type='submit', value='イマココ!', id='gps')
+      else
+        input(type='submit', value='イマココ!', id='gps', disabled)
+  .ticker-wrapper
+    .ticker
+      ul
+        li
+          span.time 17:46
+          span.name
+            a(href='#') @ken_c_lo
+          | が到着しました
+        li
+          span.time 18:22
+          span.name
+            a(href='#') @satococoa
+          | があと15km地点にまできました
+        li
+          span.time 19:04
+          span.name
+            a(href='#') @japboy
+          | が到着しました
+        li
+          span.time 19:35
+          span.name
+            a(href='#') @machida
+          | があと200km地点にまできました
+  ul.accounts
+    each attendee in data.attendees
+      if attendee.attended
+        li.arrive
+          a(href='#')
+            img(src='/images/dummy_ico_twi.jpg', alt='ken_c_lo')
+            span.screen-name @#{attendee.screen_name}
+            span.kita-time
+              | #{attendee.attended}
+              span.kita-time-small kita
+      else
+        li.ontheway
+          a(href='#')
+            img(src='/images/dummy_ico_twi.jpg', alt='ken_c_lo')
+            span.screen-name @#{attendee.screen_name}
+            span.distance
+              | あと
+              span.num= attendee.distance
+        //li.nodata
+        //  a(href='#')
+        //    img(src='/images/dummy_ico_twi.jpg', alt='ken_c_lo')
+        //    span.screen-name @satococoa
+        //    span.distance
+        //      span.num no data
+.btn-new-box
+  p.btn-new
+    a(href='#') 新規イベントを登録
+footer.footer
+  p.copyright
+    small
+      | Developed by
+      a(href='http://twitter.com/japboy/', target='_blank') @japboy
+      | , Designed by
+      a(href='http://twitter.com/ken_c_lo/', target='_blank') @ken_c_lo
+      br
+      | on
+      a(href='https://github.com/prog4designer/hackathon1st/wiki', target='_blank') #p4dhack
+      | ,
+      a(href='http://creativecommons.org/licenses/by-nc-sa/2.1/jp/', target='_blank') CC BY-NC-SA 2.1
 
 script(type='text/javascript', charset='UTF-8', src='/socket.io/socket.io.js')
 script(type='text/javascript', charset='UTF-8', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
