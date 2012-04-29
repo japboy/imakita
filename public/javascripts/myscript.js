@@ -1,4 +1,6 @@
 $(function() {
+  $('#notice-wrapper').css({display: 'none'});
+
   var xhr = new XMLHttpRequest()
     , socket = io.connect('http://' + document.location.host);
 
@@ -6,14 +8,16 @@ $(function() {
     console.log('Received ' + data.screen_name + '\'s location.');
     var userElem = document.getElementById(data.user_id);
 
+    $('#notice-wrapper').css({display: 'display'});
+
     if (data.attended) {
-      userElem.innerText = '到着っ! @ ' + data.attended;
+      userElem.innerText = data.attended;
     }
     else if (0 >= Math.round(data.distance / 1000)) {
-      userElem.innerText = '会場まで' + Math.round(data.distance) + 'm';
+      userElem.innerText = Math.round(data.distance) + 'm';
     }
     else {
-      userElem.innerText = '会場まで' + Math.round(data.distance / 1000) + 'km';
+      userElem.innerText = Math.round(data.distance / 1000) + 'km';
     }
   });
 

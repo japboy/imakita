@@ -87,7 +87,7 @@ app.get('/event', function(req, res){
           user_id: doc.attendees[i].user_id
         , screen_name: doc.attendees[i].screen_name
         //, name: doc.attendees[i].name
-        , distance: "行方不明..."  // TODO: 整形
+        , distance: null
         , attended: doc.attendees[i].attended || ""  // TODO: 欠席/未着/時間
         });
 
@@ -103,10 +103,10 @@ app.get('/event', function(req, res){
             attendees[i].distance = '到着っ! @ ' + doc.attendees[i].attended;
           }
           else if (0 >= Math.round(_distance / 1000)) {
-            attendees[i].distance = '会場まで' + Math.round(_distance) + 'm';
+            attendees[i].distance = Math.round(_distance) + 'm';
           }
           else {
-            attendees[i].distance = '会場まで' + Math.round(_distance / 1000) + 'km';
+            attendees[i].distance = Math.round(_distance / 1000) + 'km';
           }
         }
 
@@ -274,7 +274,7 @@ app.post('/api/update/user/location', function(req, res){
 
     // TODO: 期間外は弾く
     // TODO: 会場内で 51m (WLAN) 52-58m (GPS) だったので修正が必要
-    if (30 >= Math.round(distance)) {
+    if (60 >= Math.round(distance)) {
       data['attended'] = date;
     }
 
@@ -292,7 +292,7 @@ app.post('/api/update/user/location', function(req, res){
         doc.attendees[i].location.longitude = req.body.longitude;
         doc.attendees[i].modified = date;
 
-        if (30 >= Math.round(distance)) {
+        if (60 >= Math.round(distance)) {
           doc.attendees[i].attended = date;
         }
       }

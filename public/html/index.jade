@@ -8,7 +8,7 @@ html(lang='JP')
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
     link(rel='apple-touch-icon', href='img/apple-touch-icon.png')
-    link(rel='stylesheet', href='css/style.css', type='text/css', media='screen', title='no title', charset='utf-8')
+    link(rel='stylesheet', href='css/screen.css', type='text/css', media='screen', title='no title', charset='utf-8')
     script(src='js/jquery.js', type='text/javascript', charset='utf-8')
     script(src='js/ticker.js', type='text/javascript', charset='utf-8')
     script(type='text/javascript')
@@ -21,6 +21,9 @@ html(lang='JP')
       h1.logo
         a(href='/')
           img(src='img/logo.png', alt='imakita イマキタ', width='115', height='45')
+      .login
+        img(src='img/dummy_ico_twi.jpg', alt='ken_c_lo')
+        p.screen-name @ken_c_lo
     section.note-body
       .note-body-top
         p.event-title-text.num Event Title
@@ -32,7 +35,7 @@ html(lang='JP')
         form
           input.form-btn-imakita(type='submit', name='commit', value='今、ここまできた！')
       .ticker-wrapper
-        .ticker#ticker
+        #ticker.ticker
           ul
             li
               span.time 17:46
