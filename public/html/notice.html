@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="JP">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ticker.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+		    $(".ticker li").newsTicker({type:"longitudinally"});
+		});
+	</script>
+	<title>imakita[イマキタ]</title>
+</head>
+<body>
+	<header class="header clearfix">
+		<h1 class="logo"><a href="/"><img src="img/logo.png" alt="imakita イマキタ" width="115" height="45"></a></h1>
+	</header>
+  <section class="note-body">
+    <div class="note-body-top">
+      <p class="event-title-text num">Event Title</p>
+      <h2 class="event-title">第2回デザイナー x エンジニアハッカソン#p4dhack</h2>
+    </div>
+    <div class="members">
+      <p class="members-arrival">24</p>
+      <p class="members-all">35</p>
+    </div>
+    <div class="btn-imakita">
+      <form>
+        <input type="submit" name="commit" value="今、ここまできた！" class="form-btn-imakita">
+      </form>
+    </div>
+    <div class="ticker-wrapper">
+      <div class="ticker">
+        <ul>
+          <li><span class="time">17:46</span><span class="name"><a href="#">@ken_c_lo</a></span>が到着しました</li>
+          <li><span class="time">18:22</span><span class="name"><a href="#">@satococoa</a></span>があと15km地点にまできました</li>
+          <li><span class="time">19:04</span><span class="name"><a href="#">@japboy</a></span>が到着しました</li>
+          <li><span class="time">19:35</span><span class="name"><a href="#">@machida</a></span>があと200km地点にまできました</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="accounts">
+      <li class="arrive">
+        <a href="#">
+          <img src="img/dummy_ico_twi.jpg" alt="ken_c_lo" />
+          <span class="screen-name">@japboy</span>
+          <span class="kita-time">15:02<span class="kita-time-small">kita</span></span>
+        </a>
+      </li>
+      <li class="ontheway">
+        <a href="#">
+          <img src="img/dummy_ico_twi.jpg" alt="ken_c_lo" />
+          <span class="screen-name">@ken_c_lo</span>
+          <span class="distance">あと<span class="num">15km</span></span>
+        </a>
+      </li>
+      <li class="nodata">
+        <a href="#">
+          <img src="img/dummy_ico_twi.jpg" alt="ken_c_lo" />
+          <span class="screen-name">@satococoa</span>
+          <span class="distance"><span class="num">no data</span></span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <div class="btn-new-box">
+    <p class="btn-new"><a href="#">新規イベントを登録</a></p>
+  </div>
+  <footer class="footer">
+		<p class="copyright"><small>Developed by <a href="http://twitter.com/japboy/" target="_blank">@japboy</a>, Designed by <a href="http://twitter.com/ken_c_lo/" target="_blank">@ken_c_lo</a><br />
+        on <a href="https://github.com/prog4designer/hackathon1st/wiki" target="_blank">#p4dhack</a>, <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a></small></p>
+  </footer>
+  <div id="notice-wrapper">
+  	<div id="notice">
+        <img src="img/dummy_ico_twi.jpg" alt="ken_c_lo" />
+        <div class="notice-message-box">
+        	<p class="kita-time">15:02</p>
+        	<p class="notice-message"><span class="num">@ken_c_lo</span>が会場まであと<span class="num">15km</span>地点に到着しました。</p>
+        </div>
+  	</div>
+  </div>
+</body>
+</html>   
