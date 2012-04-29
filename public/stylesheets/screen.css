@@ -26,7 +26,7 @@ table{
 
 /*--------------------Initialize----------------------*/
 body{
-	background: #eac486 url(../img/bg.png) repeat 0 0;
+	background: #eac486 url(/images/bg.png) repeat 0 0;
 	color: #FFF;
 	text-shadow: 1px 1px 0 rgba(255,255,255,.3);
 	line-height: 1.6em;
@@ -65,7 +65,7 @@ display: inline-block;
 /*--------------------common----------------------*/
 @font-face {
   font-family: 'Comfortaa-Bold';
-  src: url('../img/Comfortaa-Bold.ttf') format('truetype');
+  src: url('/images/Comfortaa-Bold.ttf') format('truetype');
   }
 
 .num,.time{
@@ -87,7 +87,7 @@ display: inline-block;
 }
 .note-body{
   margin:0 10px;
-  background:#FFF url(../img/paper.png) repeat left top;
+  background:#FFF url(/images/paper.png) repeat left top;
   color:#444;
   	border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -118,7 +118,7 @@ h2{
 	position: absolute;
 	top:-5px;
 	right: 10px;
-	background: url(../img/bg_ribbon.png) no-repeat left top;
+	background: url(/images/bg_ribbon.png) no-repeat left top;
 	color: #FFF;
   text-shadow: -1px -1px 0 rgba(0,0,0,.3);
 }
@@ -168,11 +168,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', end
 background: rgb(228,84,52); /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U0NTQzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIyJSIgc3RvcC1jb2xvcj0iI2MwM2IwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5MjIyMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: url(../img/ico_pin_large.png) no-repeat 10px 5px, -moz-linear-gradient(top,  rgba(228,84,52,1) 0%, rgba(192,59,0,1) 22%, rgba(146,34,0,1) 100%); /* FF3.6+ */
-background: url(../img/ico_pin_large.png) no-repeat 10px 5px,  -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(228,84,52,1)), color-stop(22%,rgba(192,59,0,1)), color-stop(100%,rgba(146,34,0,1))); /* Chrome,Safari4+ */
-background: url(../img/ico_pin_large.png) no-repeat 10px 5px,  -webkit-linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* Chrome10+,Safari5.1+ */
-background: url(../img/ico_pin_large.png) no-repeat 10px 5px,  -o-linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* Opera 11.10+ */
-background: url(../img/ico_pin_large.png) no-repeat 10px 5px,  -ms-linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* IE10+ */
+background: url(/images/ico_pin_large.png) no-repeat 10px 5px, -moz-linear-gradient(top,  rgba(228,84,52,1) 0%, rgba(192,59,0,1) 22%, rgba(146,34,0,1) 100%); /* FF3.6+ */
+background: url(/images/ico_pin_large.png) no-repeat 10px 5px,  -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(228,84,52,1)), color-stop(22%,rgba(192,59,0,1)), color-stop(100%,rgba(146,34,0,1))); /* Chrome,Safari4+ */
+background: url(/images/ico_pin_large.png) no-repeat 10px 5px,  -webkit-linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: url(/images/ico_pin_large.png) no-repeat 10px 5px,  -o-linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* Opera 11.10+ */
+background: url(/images/ico_pin_large.png) no-repeat 10px 5px,  -ms-linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* IE10+ */
 background: linear-gradient(top,  rgba(228,84,52,1) 0%,rgba(192,59,0,1) 22%,rgba(146,34,0,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e45434', endColorstr='#922200',GradientType=0 ); /* IE6-8 */
 	color: #FFF;
@@ -286,7 +286,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e45434', end
 	width:86px;
 	height: 26px;
 	color: #FFF;
-	background: url(../img/bg_ribbon_kita.png) no-repeat left top;
+	background: url(/images/bg_ribbon_kita.png) no-repeat left top;
 	text-shadow: -1px -1px 0 rgba(0,0,0,.3);
 	line-height: 26px;
 	font-family:  Arial, Helvetica,sans-serif;
@@ -311,7 +311,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e45434', end
 	display: block;
 	width:176px;
 	height: 37px;
-	background: url(../img/bg_ribbon_new.png) no-repeat left top;
+	background: url(/images/bg_ribbon_new.png) no-repeat left top;
 	margin: 0 auto;
 	color: #FFF;
 	text-shadow: -1px -1px 0 rgba(0,0,0,.3);
@@ -391,7 +391,7 @@ div.ticker{
 	opacity:100;
 	z-index: 3;
 	margin:60px;
-  background:#FFF url(../img/paper.png) repeat left top;
+  background:#FFF url(/images/paper.png) repeat left top;
   color:#444;
   	border-radius: 6px;
 	-webkit-border-radius: 6px;
