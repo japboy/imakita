@@ -343,17 +343,20 @@ margin-top:20px;
   color: #c03b00;
 }
 div.ticker{
-	width: 280px;
+	width: 260px;
 	position: relative;
 	overflow: hidden;
 }
 .ticker ul{
-	height: 1.6em;
+	height: 2em;
 }
 .ticker ul li{
+	overflow: auto;
 	position: relative;
-	line-height: 1.6em;
-	margin-bottom: -1.6em;
+	line-height: 2em;
+	margin-bottom: -2em;
+	white-space:nowrap;
+	text-overflow: ellipsis;
 }
 .ticker li a{
 	font-weight: bold;
