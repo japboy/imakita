@@ -435,6 +435,43 @@ visibility: hidden;
 	margin:0;
 	margin-bottom: 5px;
 }
+.login{
+	position: absolute;
+	right:10px;
+	top:20px;
+	text-align: right;
+	width: 160px;
+	color: #c03b00;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+}
+.login a{
+	color: #c03b00;
+}
+.login .screen-name{
+	font-size: 12px;
+	height: 24px;
+	line-height: 24px;
+}
+.login img{
+	width: 24px;
+	height: 24px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+  -moz-box-shadow: 1px 1px 0 rgba(255,255,255,1),0 0 3px rgba(0,0,0,.3);  
+  -webkit-box-shadow: 1px 1px 0 rgba(255,255,255,1),0 0 3px rgba(0,0,0,.3);
+  float: right;
+  margin-left: 5px;
+}
+.login:after{
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
 *--------------------ADJUST----------------------*/
 .mgnbtm10{
 	margin-bottom: 10px;
