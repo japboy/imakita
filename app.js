@@ -102,7 +102,7 @@ app.get('/event', function(req, res){
           if (doc.attendees[i].attended) {
             attendees[i].distance = '到着っ! @ ' + doc.attendees[i].attended;
           }
-          else if (0 >= Math.round(data.distance / 1000)) {
+          else if (0 >= Math.round(_distance / 1000)) {
             attendees[i].distance = '会場まで' + Math.round(_distance) + 'm';
           }
           else {
