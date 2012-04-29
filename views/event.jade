@@ -22,11 +22,11 @@ section.note-body
   .btn-imakita
     form
       if !data.loggedin
-        input.form-btn-imakita(type='submit', name='commit', value='今、ここまできた！', id='gps', disabled)
+        input.form-btn-imakita.disabled(type='submit', name='commit', value='イマココ！', id='gps', disabled)
       else if data.participated
         input.form-btn-imakita(type='submit', value='イマココ!', id='gps')
       else
-        input.form-btn-imakita(type='submit', value='イマココ!', id='gps', disabled)
+        input.form-btn-imakita.disabled(type='submit', value='イマココ!', id='gps', disabled)
   .ticker-wrapper
     .ticker#ticker
       ul
