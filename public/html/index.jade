@@ -1,0 +1,92 @@
+!!! 5
+html(lang='JP')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no')
+    meta(name='format-detection', content='telephone=no')
+    link(rel='shortcut icon', href='../img/favicon.ico', type='image/x-icon')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    link(rel='apple-touch-icon', href='img/apple-touch-icon.png')
+    link(rel='stylesheet', href='css/style.css', type='text/css', media='screen', title='no title', charset='utf-8')
+    script(src='js/jquery.js', type='text/javascript', charset='utf-8')
+    script(src='js/ticker.js', type='text/javascript', charset='utf-8')
+    script(type='text/javascript')
+      $(function(){
+      $(".ticker li").newsTicker({type:"longitudinally"});
+      });
+    title imakita[イマキタ]
+  body
+    header.header.clearfix
+      h1.logo
+        a(href='/')
+          img(src='img/logo.png', alt='imakita イマキタ', width='115', height='45')
+    section.note-body
+      .note-body-top
+        p.event-title-text.num Event Title
+        h2.event-title 第2回デザイナー x エンジニアハッカソン#p4dhack
+      .members
+        p.members-arrival 24
+        p.members-all 35
+      .btn-imakita
+        form
+          input.form-btn-imakita(type='submit', name='commit', value='今、ここまできた！')
+      .ticker-wrapper
+        .ticker
+          ul
+            li
+              span.time 17:46
+              span.name
+                a(href='#') @ken_c_lo
+              | が到着しました
+            li
+              span.time 18:22
+              span.name
+                a(href='#') @satococoa
+              | があと15km地点にまできました
+            li
+              span.time 19:04
+              span.name
+                a(href='#') @japboy
+              | が到着しました
+            li
+              span.time 19:35
+              span.name
+                a(href='#') @machida
+              | があと200km地点にまできました
+      ul.accounts
+        li.arrive
+          a(href='#')
+            img(src='img/dummy_ico_twi.jpg', alt='ken_c_lo')
+            span.screen-name @japboy
+            span.kita-time
+              | 15:02
+              span.kita-time-small kita
+        li.ontheway
+          a(href='#')
+            img(src='img/dummy_ico_twi.jpg', alt='ken_c_lo')
+            span.screen-name @ken_c_lo
+            span.distance
+              | あと
+              span.num 15km
+        li.nodata
+          a(href='#')
+            img(src='img/dummy_ico_twi.jpg', alt='ken_c_lo')
+            span.screen-name @satococoa
+            span.distance
+              span.num no data
+    .btn-new-box
+      p.btn-new
+        a(href='#') 新規イベントを登録
+    footer.footer
+      p.copyright
+        small
+          | Developed by
+          a(href='http://twitter.com/japboy/', target='_blank') @japboy
+          | , Designed by
+          a(href='http://twitter.com/ken_c_lo/', target='_blank') @ken_c_lo
+          br
+          | on
+          a(href='https://github.com/prog4designer/hackathon1st/wiki', target='_blank') #p4dhack
+          | ,
+          a(href='http://creativecommons.org/licenses/by-nc-sa/2.1/jp/', target='_blank') CC BY-NC-SA 2.1
